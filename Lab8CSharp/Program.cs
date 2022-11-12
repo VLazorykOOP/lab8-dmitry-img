@@ -130,6 +130,7 @@ namespace Lab8CSharp
             static void ShowInfo(FileInfo fileInfo)
             {
                 fileInfo.GetType().GetProperties().ToList().ForEach(x => Console.WriteLine(x.Name + ": " + x.GetValue(fileInfo)));
+                Console.WriteLine();
             }
            
             Directory.CreateDirectory("D:\\temp");
@@ -161,15 +162,10 @@ namespace Lab8CSharp
 
             Console.WriteLine("t1.txt");
             ShowInfo(t1);
-            Console.WriteLine();
             Console.WriteLine("t2.txt");
             ShowInfo(t2);
-            Console.WriteLine();
             Console.WriteLine("t3.txt");
             ShowInfo(t3);
-            Console.WriteLine();
-
-
 
             File.Move("D:\\temp\\Паскар_Дмитро1\\t2.txt", "D:\\temp\\Паскар_Дмитро2\\t2.txt");
             
